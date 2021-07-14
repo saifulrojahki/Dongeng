@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigation} from '../component';
-import {Home, RequestDongeng, HelpDongeng} from '../pages';
+import {Home, RequestDongeng, HelpDongeng, SplashScreen} from '../pages';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,6 +21,11 @@ const MainApp = () => {
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        name="SplashScreen"
+        component={SplashScreen}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="MainApp"
         component={MainApp}

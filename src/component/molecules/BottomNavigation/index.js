@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, View, TouchableOpacity} from 'react-native';
 import {
   IcHomeOff,
   IcHomeOn,
@@ -8,17 +8,30 @@ import {
   IcProfileOff,
   IcProfileOn,
 } from '../../../assets';
+import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 
 // set icon bottom navigation on atau off
 const Icon = ({label, focus}) => {
   switch (label) {
     case 'Home':
       // tenary opertator pengganti if jika hanya 2 kodisi
-      return focus ? <IcHomeOn /> : <IcHomeOff />;
+      return focus ? (
+        <FontAwesome5Icon name="book-open" size={30} color="#7530FF" />
+      ) : (
+        <FontAwesome5Icon name="book-open" size={30} color="#E2E2E2" />
+      );
     case 'Request':
-      return focus ? <IcOrderOn /> : <IcOrderOff />;
+      return focus ? (
+        <FontAwesome5Icon name="bullhorn" size={30} color="#7530FF" />
+      ) : (
+        <FontAwesome5Icon name="bullhorn" size={30} color="#E2E2E2" />
+      );
     case 'Help':
-      return focus ? <IcProfileOn /> : <IcProfileOff />;
+      return focus ? (
+        <FontAwesome5Icon name="atlas" size={30} color="#7530FF" />
+      ) : (
+        <FontAwesome5Icon name="atlas" size={30} color="#E2E2E2" />
+      );
     default:
       return <IcHomeOn />;
   }

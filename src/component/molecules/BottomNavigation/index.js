@@ -1,13 +1,5 @@
 import React from 'react';
 import {StyleSheet, View, TouchableOpacity} from 'react-native';
-import {
-  IcHomeOff,
-  IcHomeOn,
-  IcOrderOff,
-  IcOrderOn,
-  IcProfileOff,
-  IcProfileOn,
-} from '../../../assets';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 
 // set icon bottom navigation on atau off
@@ -33,7 +25,7 @@ const Icon = ({label, focus}) => {
         <FontAwesome5Icon name="atlas" size={30} color="#E2E2E2" />
       );
     default:
-      return <IcHomeOn />;
+      return <FontAwesome5Icon name="book-open" size={30} color="#7530FF" />;
   }
 };
 

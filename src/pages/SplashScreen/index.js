@@ -12,7 +12,8 @@ const SplashScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
       <FontAwesome5Icon name="book-reader" color="#7530FF" size={50} />
-      <Text style={styles.title}>Rumah Mural</Text>
+      <Text style={styles.title}>Dongeng</Text>
+      <Text style={styles.created}>Created By Saiful Rojahki</Text>
     </View>
   );
 };
@@ -28,6 +29,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
+    fontFamily: 'Poppins-Medium',
+    color: '#7530FF',
+    marginTop: 20,
+  },
+  created: {
+    fontSize: 14,
     fontFamily: 'Poppins-Medium',
     color: '#020202',
     marginTop: 20,
